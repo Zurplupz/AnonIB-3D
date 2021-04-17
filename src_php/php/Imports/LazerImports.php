@@ -1,4 +1,4 @@
-<?
+<?php
 
 include_once "Libs/Lazer/Classes/Database.php";
 include_once "Libs/Lazer/Classes/Helpers/Data.php";

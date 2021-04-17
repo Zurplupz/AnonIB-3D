@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'Utils/Helpers.php';
 
 class FakeFile {

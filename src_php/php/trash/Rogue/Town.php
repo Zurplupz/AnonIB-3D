@@ -1,4 +1,4 @@
-<?
+<?php
 require_once 'Models/Rogue/Economy.php';
 class Town {
 

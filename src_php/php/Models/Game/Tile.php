@@ -1,4 +1,4 @@
-<?
+<?php
 class Tile {
 
     public $value;
