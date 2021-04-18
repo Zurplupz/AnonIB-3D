@@ -1,25 +1,25 @@
 <div class="container">
-  <a routerLink="/admin-post">Posts</a> - <a routerLink="/admin-map">Maps</a> - <a routerLink="/gl-view">Go Game!</a>
+  <a routerLink="/admin-post">Posts</a> - <a routerLink="/admin-map">Mapas</a> - <a routerLink="/gl-view">Entrar al juego</a>
   <div class="post-viewer-ui-message">
       <select id="map-select" [(ngModel)]="selectedMapKey"  (change)="onChangeMap($event.target.value)">
           <option *ngFor="let map of maps" value="{{map.key}}">{{map.name}}</option>
       </select>
       <br/>
-      <button (click)="moveMap(3)">Go West</button>
-      <button (click)="moveMap(0)">Go North</button>
-      <button (click)="moveMap(2)">Go South</button>
-      <button (click)="moveMap(1)">Go East</button> <br/>
+      <button (click)="moveMap(3)">Oeste</button>
+      <button (click)="moveMap(0)">Norte</button>
+      <button (click)="moveMap(2)">Sur</button>
+      <button (click)="moveMap(1)">Este</button> <br/>
      ----------------------------------<br/>
     <div *ngIf="selectedMap != null">
-        Map name: {{selectedMap.name}} ({{selectedMap.x}}, {{selectedMap.y}})<br/>
+        Nombre de mapa: {{selectedMap.name}} ({{selectedMap.x}}, {{selectedMap.y}})<br/>
         Map key: <b>{{selectedMap.key}}</b><br/>
         Map width: {{selectedMap.width}}<br/>
         Map height: {{selectedMap.height}}<br/>
         ----------------------------------<br/>
-        Door North <input [(ngModel)]="selectedMap.door_key_n" /><br/>
-        Door East <input [(ngModel)]="selectedMap.door_key_e" /><br/>
-        Door South <input [(ngModel)]="selectedMap.door_key_s" /><br/>
-        Door West <input [(ngModel)]="selectedMap.door_key_w" /><br/>
+        Puerta Norte <input [(ngModel)]="selectedMap.door_key_n" /><br/>
+        Puerta Este <input [(ngModel)]="selectedMap.door_key_e" /><br/>
+        Puerta Sur <input [(ngModel)]="selectedMap.door_key_s" /><br/>
+        Puerta Oeste <input [(ngModel)]="selectedMap.door_key_w" /><br/>
         ----------------------------------<br/>
         <div *ngFor="let line of mapDataLines; index as y" class="ascii-art">
           <span *ngFor="let tile of line; index as x ">
@@ -34,11 +34,11 @@
         <select id="tile-select" [(ngModel)]="selectedTileVal"  (change)="onChangeTileBrush($event.target.value)">
             <option *ngFor="let tile of  allTiles" value="{{tile.value}}">{{tile.name}} {{tile.display}} ({{tile.value}})</option>
         </select>
-        <button (click)="saveMap()">Save the new map</button>
+        <button (click)="saveMap()">Guardar nuevo mapa</button>
     </div>
 
     <div *ngIf="selectedMap == null">
-    There's NOTHING here! ({{currentX}}, {{currentY}})
+    No hay nada aquí ({{currentX}}, {{currentY}})
     </div>
   </div>
 </div>

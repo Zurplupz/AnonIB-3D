@@ -24,22 +24,22 @@
         <div  id="pointerInteract" class="ui-game">
 
          <div *ngIf="currentinteraction != null">
-            <button type="button" class="btn btn-dark" *ngIf="currentinteraction.type === 3 " id="openPostBtn" type="button" class="btn btn-secondary" (click)="climbLadder()">🐸 Climb</button>
+            <button type="button" class="btn btn-dark" *ngIf="currentinteraction.type === 3 " id="openPostBtn" type="button" class="btn btn-secondary" (click)="climbLadder()">🐸 Subir</button>
             <button type="button" class="btn btn-dark" *ngIf="currentinteraction.type === 4 " id="openPostBtn" (click)="openDoor()">🚪</button>
             <button type="button" class="btn btn-dark" *ngIf="currentinteraction.type === 1 || currentinteraction.type === 8" id="openPostBtn" (click)="openUrl()">🔎</button>
 
-            <button type="button" class="btn btn-dark" *ngIf="gameDataModel.postsLeft > 0 && (currentinteraction.type === 1 || currentinteraction.type === 8)" id="openPostBtn" (click)="addReply(currentinteraction.value.id)">💬 Reply to <b class="reply-underline">>>{{currentinteraction.value.id}}</b> </button>
+            <button type="button" class="btn btn-dark" *ngIf="gameDataModel.postsLeft > 0 && (currentinteraction.type === 1 || currentinteraction.type === 8)" id="openPostBtn" (click)="addReply(currentinteraction.value.id)">💬 Responder <b class="reply-underline">>>{{currentinteraction.value.id}}</b> </button>
             <button type="button" class="btn btn-dark" *ngIf="gameDataModel.postsLeft > 0 && currentinteraction.type === 2 " id="openPostingBtn"(click)=" openPostingUI()">✍️</button>
             <button type="button" class="btn btn-dark" *ngIf="gameDataModel.postsLeft > 0 &&  (currentinteraction.type === 2 || currentinteraction.type === 8)" id="openPostingBtn" (click)=" openPaintingUI()">🎨</button>
 
             <button type="button" class="btn btn-dark" *ngIf="currentinteraction.type === 5 " id="openPostingBtn" (click)=" getItem(currentinteraction.value.key)">🤚 Get item {{currentinteraction.value.name}} </button>
-            <button type="button" class="btn btn-dark" *ngIf="currentinteraction.type === 6 " id="openPostingBtn"(click)=" passGate(currentinteraction.value)">⛩️ Go to <b>/{{currentinteraction.value}}</b></button>
-            <button type="button" class="btn btn-dark" *ngIf="currentinteraction.type === 7 " id="openPostingBtn" (click)=" gotTo(currentinteraction.value)">More info <b>/{{currentinteraction.value}}</b></button>
+            <button type="button" class="btn btn-dark" *ngIf="currentinteraction.type === 6 " id="openPostingBtn"(click)=" passGate(currentinteraction.value)">⛩️ Cambiar al mapa <b>/{{currentinteraction.value}}</b></button>
+            <button type="button" class="btn btn-dark" *ngIf="currentinteraction.type === 7 " id="openPostingBtn" (click)=" gotTo(currentinteraction.value)">Mas información <b>/{{currentinteraction.value}}</b></button>
             
         </div>
 
         <div *ngIf="reply > -1">
-            Plan to reply to <b class="reply-underline">>>{{reply}}</b> <span (click)=" destroyReply(-1)"> 🗑️</span>
+            Respondiendo al post <b class="reply-underline">>>{{reply}}</b> <span (click)=" destroyReply(-1)"> 🗑️</span>
         </div>
 
             <div *ngFor="let item of gameDataModel.itemsPlayer">

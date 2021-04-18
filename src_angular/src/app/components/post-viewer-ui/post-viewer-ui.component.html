@@ -9,13 +9,13 @@
     <app-media-display *ngIf="postModel != null" class="img-preview" [url]="postModel.url" ></app-media-display>
     <br/>
     URL:<a placeholder="Your file url" [href]="postModel.url"> {{postModel.url}} </a><br/>
-    <i>To report content, write to monsieur.krunch@gmail.com, mentionning the ID of the post.</i><br/>
-    <button type="button" class="btn btn-secondary"  (click) = "pinPost(postModel)" >Pin the post</button><button type="button" class="btn btn-danger" (click) = "closePost()" >Close</button><br/>
+    <i>Para reportar un post, envía una captura con el ID del post a <b><a href="mailto:admin@domingochan.org">admin@domingochan.org</a></b>.</i><br/>
+    <button type="button" class="btn btn-secondary"  (click) = "pinPost(postModel)" >Hacer post sticky</button><button type="button" class="btn btn-danger" (click) = "closePost()" >Cerrar</button><br/>
     -----------------------------------------------------<br/>
     <div>
-      <button *ngIf="canDelete()" type="button" class="btn" (click) = "deletePost(postModel)" >Delete the post 🗑️</button>
-      <button *ngIf="isAdmin()"type="button" class="btn" (click) = "canonPost(postModel.id,postModel.map_key)" >Active or Disactive canon status Δ</button>
-      <button *ngIf="isAdmin()"type="button" class="btn" (click) = "setPostUrlToFile(postModel.id)" >Transform URL to File 🧙</button>
+      <button *ngIf="canDelete()" type="button" class="btn" (click) = "deletePost(postModel)" >Borrar post 🗑️</button>
+      <button *ngIf="isAdmin()"type="button" class="btn" (click) = "canonPost(postModel.id,postModel.map_key)" >Activar o desactivar status canon 👌 (ni puta idea que hace xd)</button>
+      <button *ngIf="isAdmin()"type="button" class="btn" (click) = "setPostUrlToFile(postModel.id)" >Transformar URL a Archivo 🧙</button>
       <!--button type="button" class="btn" (click) = "banPost()" >Ban user 🔨</button-->
     </div>
   </div>
@@ -28,13 +28,13 @@
     <app-media-display *ngIf="post.url != null && post.url != '' " class="img-preview" [url]="post.url" ></app-media-display>
     <br/>
     URL:<a placeholder="Your file url" [href]="post.url"> {{post.url}} </a><br/>
-    <i>To report content, write to monsieur.krunch@gmail.com, mentionning the ID of the post.</i><br/>
-    <button type="button"  class="btn btn-secondary" (click) = "pinPost(post)" >Pin the post</button> <button type="button" class="btn btn-danger" (click) = "closePost()" >Close</button><br/>
+    <i>Para reportar un post, envía una captura con el ID del post a <b><a href="mailto:admin@domingochan.org">admin@domingochan.org</a></b>.</i><br/>
+    <button type="button"  class="btn btn-secondary" (click) = "pinPost(post)" >Hacer post sticky</button> <button type="button" class="btn btn-danger" (click) = "closePost()" >Cerrar</button><br/>
     -----------------------------------------------------<br/>
     <div>
-        <button *ngIf="canDelete()" type="button" class="btn" (click) = "deletePost(post)" >Delete the post 🗑️</button>
-        <button *ngIf="isAdmin()"type="button" class="btn" (click) = "canonPost(post.id,post.map_key)" >Active or Disactive canon status Δ</button>
-        <button *ngIf="isAdmin()"type="button" class="btn" (click) = "setPostUrlToFile(post.id)" >Transform URL to File 🧙</button>
+        <button *ngIf="canDelete()" type="button" class="btn" (click) = "deletePost(post)" >Borrar post 🗑️</button>
+        <button *ngIf="isAdmin()"type="button" class="btn" (click) = "canonPost(post.id,post.map_key)" >Activar o desactivar status canon 👌 (ni puta idea que hace xd)</button>
+        <button *ngIf="isAdmin()"type="button" class="btn" (click) = "setPostUrlToFile(post.id)" >Transformar URL a Archivo 🧙</button>
         <!--button type="button" class="btn" (click) = "banPost()" >Ban user 🔨</button-->
       </div>
   </div>
