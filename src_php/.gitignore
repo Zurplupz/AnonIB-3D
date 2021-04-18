@@ -1,2 +1,4 @@
 /php/password/password.txt
 /php/data/*.json
+/php/torrents/*
+/php/uploads/*
