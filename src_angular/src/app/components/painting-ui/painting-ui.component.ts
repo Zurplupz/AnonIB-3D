@@ -100,7 +100,7 @@ export class PaintingUiComponent implements OnInit {
   sendImg(){
 
     if( (this.clickX.length +this.clickY.length) < 200){
-      alert("It's doesn't looks like a big drawing :( ");
+      alert("El dibujo debe ser mas grande!");
       return;
     } 
 
