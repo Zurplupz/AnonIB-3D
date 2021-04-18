@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 html{
     margin: 0;
     width:  100%;
@@ -7,6 +9,12 @@ html{
     url("/assets/img/bg_radi_red_dark.png");
     touch-action: none;
 }
+
+body {
+    font-family: 'Ubuntu', sans-serif !important;
+}
+
+h1 { font-weight: bold; }
 
 .wrapper {
     /* Break the flow */
