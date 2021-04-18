@@ -66,7 +66,7 @@
             },
             error: function(xhr, textStatus, errorThrown){
 
-              console("Some error happened");
+              console.error("Some error happened");
               $("#admin-ws_response").val("xhr ="+xhr+"; textStatus= "+textStatus+"; errorThrown="+errorThrown);
 
             }
@@ -90,7 +90,7 @@
             },
             error: function(xhr, textStatus, errorThrown){
 
-              console("Some error happened");
+              console.error("Some error happened");
               $("#admin-ws_response").val("xhr ="+xhr+"; textStatus= "+textStatus+"; errorThrown="+errorThrown);
 
             }
@@ -114,7 +114,7 @@
             },
             error: function(xhr, textStatus, errorThrown){
 
-              console("Some error happened");
+              console.error("Some error happened");
               $("#admin-ws_response").val("xhr ="+xhr+"; textStatus= "+textStatus+"; errorThrown="+errorThrown);
 
             }
@@ -137,7 +137,7 @@
           },
           error: function(xhr, textStatus, errorThrown){
 
-            console("Some error happened");
+            console.error("Some error happened");
             $("#admin-ws_response").val("xhr ="+xhr+"; textStatus= "+textStatus+"; errorThrown="+errorThrown);
 
           }
@@ -161,7 +161,7 @@
           },
           error: function(xhr, textStatus, errorThrown){
 
-            console("Some error happened");
+            console.error("Some error happened");
             $("#admin-ws_response").val("xhr ="+xhr+"; textStatus= "+textStatus+"; errorThrown="+errorThrown);
 
           }
@@ -185,7 +185,7 @@
         },
         error: function(xhr, textStatus, errorThrown){
 
-          console("Some error happened");
+          console.error("Some error happened");
           $("#admin-ws_response").val("xhr ="+xhr+"; textStatus= "+textStatus+"; errorThrown="+errorThrown);
 
         }
@@ -208,7 +208,7 @@
             },
             error: function(xhr, textStatus, errorThrown){
 
-              console("Some error happened");
+              console.error("Some error happened");
               $("#admin-ws_response").val("xhr ="+xhr+"; textStatus= "+textStatus+"; errorThrown="+errorThrown);
 
             }
@@ -230,7 +230,7 @@
             },
             error: function(xhr, textStatus, errorThrown){
 
-              console("Some error happened");
+              console.error("Some error happened");
               $("#admin-ws_response").val("xhr ="+xhr+"; textStatus= "+textStatus+"; errorThrown="+errorThrown);
 
             }
