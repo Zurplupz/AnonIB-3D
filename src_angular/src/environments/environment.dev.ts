@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'srv/php',
+  apiUrl: 'srv/php/',
   clientUrl: '/',
 };
