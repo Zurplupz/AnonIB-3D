@@ -39,7 +39,7 @@
         </div>
 
         <div *ngIf="reply > -1">
-            Estas respondiendo al post <b class="reply-underline">>>{{reply}}</b> <span style="cursor:pointer;" (click)=" destroyReply(-1)"> Click aquí para cancelar 🗑️</span>
+            Estas respondiendo al post <b class="reply-underline">>>{{reply}}</b> <br/> <b style="cursor:pointer;" (click)=" destroyReply(-1)"> Click aquí para cancelar 🗑️</b>
         </div>
 
             <div *ngFor="let item of gameDataModel.itemsPlayer">

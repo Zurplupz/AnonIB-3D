@@ -10,7 +10,7 @@
     <br/>
     URL:<a placeholder="Your file url" [href]="postModel.url"> {{postModel.url}} </a><br/>
     <i>Para reportar un post, envía una captura con el ID del post a <b><a href="mailto:admin@domingochan.org">admin@domingochan.org</a></b>.</i><br/>
-    <button type="button" class="btn btn-secondary"  (click) = "pinPost(postModel)" >Hacer post sticky</button><button type="button" class="btn btn-danger" (click) = "closePost()" >Cerrar</button><br/>
+    <button type="button" class="btn btn-secondary"  (click) = "pinPost(postModel)" >Fijar post en pantalla</button><button type="button" class="btn btn-danger" (click) = "closePost()" >Cerrar</button><br/>
     -----------------------------------------------------<br/>
     <div>
       <button *ngIf="canDelete()" type="button" class="btn" (click) = "deletePost(postModel)" >Borrar post 🗑️</button>
@@ -29,7 +29,7 @@
     <br/>
     URL:<a placeholder="Your file url" [href]="post.url"> {{post.url}} </a><br/>
     <i>Para reportar un post, envía una captura con el ID del post a <b><a href="mailto:admin@domingochan.org">admin@domingochan.org</a></b>.</i><br/>
-    <button type="button"  class="btn btn-secondary" (click) = "pinPost(post)" >Hacer post sticky</button> <button type="button" class="btn btn-danger" (click) = "closePost()" >Cerrar</button><br/>
+    <button type="button"  class="btn btn-secondary" (click) = "pinPost(post)" >Fijar post en pantalla</button> <button type="button" class="btn btn-danger" (click) = "closePost()" >Cerrar</button><br/>
     -----------------------------------------------------<br/>
     <div>
         <button *ngIf="canDelete()" type="button" class="btn" (click) = "deletePost(post)" >Borrar post 🗑️</button>
