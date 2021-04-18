@@ -4,7 +4,7 @@
 <div id="ui-game-container">
     <div *ngIf="!isMobile" id="mainUI" class="ui-game bgGameUI">
     <div>
-        <div *ngIf="config" >use <b>⌨️ {{config.key_mapping}}</b> to move <button button class="btn btn-secondary  btn-sm" (click)="changeMapping()">change</button></div>
+        <div *ngIf="config" >usa <b>⌨️ {{config.key_mapping}}</b> para moverte <button button class="btn btn-secondary  btn-sm" (click)="changeMapping()">Cambiar</button></div>
     </div>
 
     </div>
@@ -39,7 +39,7 @@
         </div>
 
         <div *ngIf="reply > -1">
-            Respondiendo al post <b class="reply-underline">>>{{reply}}</b> <span (click)=" destroyReply(-1)"> 🗑️</span>
+            Estas respondiendo al post <b class="reply-underline">>>{{reply}}</b> <span style="cursor:pointer;" (click)=" destroyReply(-1)"> Click aquí para cancelar 🗑️</span>
         </div>
 
             <div *ngFor="let item of gameDataModel.itemsPlayer">
@@ -82,7 +82,7 @@
             <!--app-chat-view *ngIf="!isMobile && gameDataModel.player != null" [gameDataModel]="gameDataModel"></app-chat-view-->
             <div>
             <span class="bgGameUI">
-            <div>Due moderation issues post is currently limited. {{gameDataModel.postsLeft}} post(s) left.</div>
+            <div>Puedes publicar un maximo de {{gameDataModel.postsLeft}} post(s).</div>
             <a href="https://twitter.com/domingochan_org" target="blank_">🐦 Twitter</a>
             </span>
             </div>
